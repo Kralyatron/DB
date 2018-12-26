@@ -9,8 +9,8 @@ $Pasport = mysqli_real_escape_string($link, $_POST['Pasport']);
 $Stepen = mysqli_real_escape_string($link, $_POST['Stepen']);
 $Diploma = mysqli_real_escape_string($link, $_POST['Diploma']);
 $Spec = mysqli_real_escape_string($link, $_POST['Spec']);
-$Time_of_work = mysqli_real_escape_string($link, $_POST['Time of work']);
-$cab = mysqli_real_escape_string($link, $_POST['Cabinet']);
+$Time_of_work = mysqli_real_escape_string($link, $_POST['Time_of_work']);
+$cab = mysqli_real_escape_string($link, $_POST['cab']);
 // Ecape String
 
 // PhPMyAdmin // Sakila and World
