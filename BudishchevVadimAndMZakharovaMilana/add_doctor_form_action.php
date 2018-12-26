@@ -22,7 +22,7 @@ echo $Spec;
 echo $Time_of_work;
 echo $cab;
 
-$SQLquery = "INSERT INTO Doctors (id,FIO,Pasport,Stepen,Diploma,Spec,Time of work, cab) VALUES (NULL, '$FIO','$Pasport', '$Stepen', '$Diploma', '$Spec', '$Time_of_work', '$cab')";
+$SQLquery = "INSERT INTO Doctors (id,FIO,Pasport,Stepen,Diploma,Spec,Time_of_work,cab) VALUES (NULL, '$FIO','$Pasport', '$Stepen', '$Diploma', '$Spec', '$Time_of_work', '$cab')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
