@@ -9,10 +9,15 @@ $family_name = mysqli_real_escape_string($link, $_POST['family_name']);
 // Ecape String
 
 // PhPMyAdmin // Sakila and World
-echo $first_name;
-echo $family_name;
+echo $FIO;
+echo $Pasport;
+echo $Stepen;
+echo $Diploma;
+echo $Spec;
+echo $Time_of_work;
+echo $cab;
 
-$SQLquery = "INSERT INTO authors (AuthorID, FirstName, FamilyName) VALUES ((SELECT max(Author ID)+1 from (Select AuthorID from authors) as ID), '$first_name','$family_name')";
+$SQLquery = "INSERT INTO Doctors (id,FIO,Pasport,Stepen,Diploma,Spec,Time of work, cab) VALUES ((SELECT IFNULL(max(id)+1,1) from (Select id from Doctors) as ID), '$FIO','$Pasport', '$Stepen', '$Diploma', '$Spec', '$Time_of_work', '$cab')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
