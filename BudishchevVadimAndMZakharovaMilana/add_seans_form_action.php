@@ -3,18 +3,18 @@ include('config.php');
 $link = mysqli_connect($server, $user, $password, $database)
 	or die('Error: Unable to connect: ' . mysqli_connect_error());
 
-$book_authorid = mysqli_real_escape_string($link, $_POST['id']);
-$book_title = mysqli_real_escape_string($link, $_POST['patseans_seansid']);
-$book_year = mysqli_real_escape_string($link, $_POST['Doctors_id']);
-$book_year = mysqli_real_escape_string($link, $_POST['result']);
-$book_year = mysqli_real_escape_string($link, $_POST['date']);
+$patseans_seansid = mysqli_real_escape_string($link, $_POST['patseans_seansid']);
+$Doctors_id = mysqli_real_escape_string($link, $_POST['Doctors_id']);
+$result = mysqli_real_escape_string($link, $_POST['result']);
+$date = mysqli_real_escape_string($link, $_POST['date']);
 
 // «¿›— ≈…œ»“‹
 // PhPMyAdmin
 // —¿ »À¿ ¬Œ–Àƒ
-echo $book_authorid;
-echo $book_title;
-echo $book_year;
+echo $patseans_seansid;
+echo $Doctors_id;
+echo $result;
+echo $date;
 $SQLquery = "INSERT INTO visitdoctor (patseans_seansid,Doctors_id,result,date) VALUES ($patseans_seansid,$Doctors_id,'$result','$date')";
 echo '<BR> SQL query: ';
 echo $SQLquery;

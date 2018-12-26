@@ -66,7 +66,7 @@
 				<br>
 				Result: <input type="text" name="result">
           		  	<br>
-				Date: <input type="text" name="date">
+				Date (YYYY-MM-DD HH:MM:SS): <input type="text" name="date">
           		  	<br> 
 
             		  	<input type="submit" value="Add new Session">
