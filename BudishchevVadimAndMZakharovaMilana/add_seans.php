@@ -68,7 +68,11 @@
 				Result: <input type="text" name="result">
           		  	<br>
 				Date (YYYY-MM-DD HH:MM:SS): <input type="text" name="date">
-          		  	<br> 
+          		  	<br>
+				<br>
+				Index of the current session: <input type="text" name="seans_id2">
+          		  	<br>
+ 
 
             		  	<input type="submit" value="Add new Session">
       			  </form>
