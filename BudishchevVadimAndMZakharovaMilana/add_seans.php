@@ -26,7 +26,7 @@
 			  <a href="add_patient.html"> <P>Add a new patient</P> </a>
 			</TD>
 			<TD>
-			  <P>Add New Book:</P>
+			  <P>Add New Session:</P>
 			  <form action="add_seans_form_action.php" method="post">
           		  	Select Patient:
 				<select name="patseans_seansid">
@@ -62,6 +62,7 @@
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
 					?>
+				</select>
 				<br>
 				Result: <input type="text" name="result">
           		  	<br>
