@@ -1,11 +1,11 @@
 <html>
  <head>
-  <title>WEB-site of the Sletcova National Library</title>
+  <title>WEB-site of the hospital</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
 	<P style="color:red; font-size:18">
-	Welcome to the Slepcova Valentina National Library!<BR>
+	Welcome to the Hospital!<BR>
 	<BR>
 	Please feel free to browse thorugh the site.
 	</P>
