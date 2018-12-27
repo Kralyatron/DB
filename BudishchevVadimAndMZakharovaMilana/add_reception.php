@@ -80,7 +80,7 @@
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
-						printf('<option>%d</option>',$result[0],);
+						printf('%d',$result[0],);
 					}
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
