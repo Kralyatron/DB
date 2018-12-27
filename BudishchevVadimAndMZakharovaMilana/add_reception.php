@@ -37,7 +37,7 @@
 					$link = mysqli_connect($server, $user, $password, $database)					
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
 						
-					$SQLquery = 'SELECT seansid,concat(patseans.jaloba,' ',patients.FIO) FROM patseans inner join patients on patseans.patients_id=patients.id';
+					$SQLquery = 'SELECT seansid,concat(patseans.jaloba,\' \',patients.FIO) FROM patseans inner join patients on patseans.patients_id=patients.id';
 		                        $SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
