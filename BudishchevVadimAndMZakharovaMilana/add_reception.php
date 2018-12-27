@@ -28,7 +28,7 @@
 			</TD>
 			<TD>
 			  <P>Add New Session:</P>
-			  <form action="add_seans_form_action.php" method="post">
+			  <form action="add_reception_form_action.php" method="post">
               		  	Select Doctor:
 				<select name="Doctors_id">
 					<?php 
