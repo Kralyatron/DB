@@ -48,28 +48,9 @@
 					?>
 				</select>	
           		  	<br>
-
-              		  	Select Doctor:
-				<select name="Doctors_id">
-					<?php 
-		                        include('config.php');	
-					$link = mysqli_connect($server, $user, $password, $database)					
-	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
-						
-					$SQLquery = 'SELECT id,FIO FROM Doctors';
-					$SQLresult = mysqli_query($link,$SQLquery);
-					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
-					{
-						printf('<option value=%d>%s</option>',$result[0],$result[1]);
-					}
-					mysqli_free_result($SQLresult);
-					mysqli_close($link);
-					?>
-				</select>
-				<br>
-			Date (YYYY-MM-DD HH:MM:SS): <input type="text" name="date">
+              		 	Result: <input type="text" name="result">
           		  	<br>
-			 	<input type="submit" value="Add new Session">
+				<input type="submit" value="Add new Session">
       			  </form>
 			</TD>
 		</TR>
