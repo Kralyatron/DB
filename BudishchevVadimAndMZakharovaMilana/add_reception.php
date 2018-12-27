@@ -77,10 +77,11 @@
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
 						
 					$SQLquery = 'SELECT seansid FROM patseans';
-					$SQLresult = mysqli_query($link,$SQLquery);
+					$SQLquery = 'SELECT seansid FROM patseans';
+		                        $SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
-						printf('%d',$result[0],);
+						printf('<opiton value=%d>%d</option>',$result[0],result[1]);
 					}
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
