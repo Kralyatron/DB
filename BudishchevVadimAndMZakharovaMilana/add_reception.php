@@ -29,25 +29,7 @@
 			<TD>
 			  <P>Add New Session:</P>
 			  <form action="add_seans_form_action.php" method="post">
-          		  	Select Patient:
-				<select name="patseans_seansid">
-					<?php 
-		                        include('config.php');	
-					$link = mysqli_connect($server, $user, $password, $database)					
-	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
-						
-					$SQLquery = 'SELECT id,FIO FROM patients';
-					$SQLresult = mysqli_query($link,$SQLquery);
-					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
-					{
-						printf('<option value=%d>%s</option>',$result[0],$result[1]);
-					}
-					mysqli_free_result($SQLresult);
-					mysqli_close($link);
-					?>
-				</select>
-         		  	<br>
-          		  	Select Doctor:
+              		  	Select Doctor:
 				<select name="Doctors_id">
 					<?php 
 		                        include('config.php');	
