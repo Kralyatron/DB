@@ -21,7 +21,7 @@
 	printf('<TR> %s',"\n");
 	printf('	<TH>Seans_id</TH> %s',"\n");
 	printf('	<TH>Patients_id</TH> %s',"\n");
-	printf('	<TH>Result</TH> %s',"\n");
+	printf('	<TH>Complaint</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
         while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
