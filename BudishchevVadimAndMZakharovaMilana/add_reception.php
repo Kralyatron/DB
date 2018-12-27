@@ -70,7 +70,7 @@
 				Date (YYYY-MM-DD HH:MM:SS): <input type="text" name="date">
           		  	<br>
 				<br>
-				Index of the current session: <input type="text" name="seans_id2">
+				Index of the current session:
 				<?php 
 		                        include('config.php');	
 					$link = mysqli_connect($server, $user, $password, $database)					
