@@ -24,7 +24,8 @@
 			  <a href="visitdoctor.php"> <P>Doctors visited</P> </a>
 			  <a href="add_doctor.html"> <P>Add a new doctor</P> </a>
 			  <a href="add_patient.html"> <P>Add a new patient</P> </a>
-			  <a href="add_seans.php"> <P>Add a new session</P> </a>
+			  <a href="add_seans.php"> <P>Add a new session</P> </a>			  
+			  <a href="add_reception.php"> <P>Add a new reception</P> </a> 	
 			</TD>
 			<TD>
 			  <P>Add New Session:</P>
@@ -36,11 +37,11 @@
 					$link = mysqli_connect($server, $user, $password, $database)					
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
 						
-					$SQLquery = 'SELECT seansid FROM patseans';
+					$SQLquery = 'SELECT seansid,concat(patseans.jaloba,' ',patients,FIO) FROM patseans inner join patients on patseans.patients_id=patients.id';
 		                        $SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
-						printf('<option value=%d>%d</option>',$result[0],$result[0]);
+						printf('<option value=%d>%s</option>',$result[0],$result[1]);
 					}
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
