@@ -29,10 +29,7 @@
 			<TD>
 			  <P>Add New Session:</P>
 			  <form action="add_seans_form_action.php" method="post">
-          		      	<br>
-				Index of the current session: <input type="text" name="seansid">
-          		  	<br>
-				Select Patient:
+       				Select Patient:
 				<select name="patients_id">
 					<?php 
 		                        include('config.php');	
