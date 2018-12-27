@@ -29,7 +29,7 @@
         while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %d </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD><TD> %d </TD> ',$result[11],$result[4],$result[13],$result[10],$result[9]);
+		printf('<TD> %d </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD><TD> %s </TD> ',$result[11],$result[4],$result[13],$result[10],$result[9]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
