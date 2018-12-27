@@ -18,7 +18,6 @@ echo $result;
 echo $date;
 echo $seans_id2;
 $SQLquery = "INSERT INTO visitdoctor (patseans_seansid,Doctors_id,result,date,seans_id2) VALUES ($patseans_seansid,$Doctors_id,'$result','$date',$seans_id2)";
-$SQLquery = "INSERT INTO patseans (seansid,patients_id,result) VALUES ($seans_id2,$patseans_seansid,'$result')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 

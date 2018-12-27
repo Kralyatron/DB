@@ -19,18 +19,17 @@
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
-	printf('	<TH>id</TH> %s',"\n");
+	printf('	<TH>Session_id</TH> %s',"\n");
 	printf('	<TH>Patients_id</TH> %s',"\n");
 	printf('	<TH>Doctors_id</TH> %s',"\n");
-	printf('	<TH>result</TH> %s',"\n");
 	printf('	<TH>date</TH> %s',"\n");
-	printf('	<TH>Session_id</TH> %s',"\n");
+	printf('	<TH>result</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
         while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %d </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD><TD> %d </TD> ',$result[6],$result[4],$result[13],$result[9],$result[10],$result[11]);
+		printf('<TD> %d </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD><TD> %d </TD> ',$result[11],$result[4],$result[13],$result[10],$result[9]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
