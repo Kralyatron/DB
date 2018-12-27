@@ -54,11 +54,11 @@
 					$link = mysqli_connect($server, $user, $password, $database)					
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
 						
-					$SQLquery = 'SELECT id,FIO FROM Doctors';
+					$SQLquery = 'SELECT * FROM Doctors';
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
-						printf('<option value=%d>%s</option>',$result[0],$result[1]);
+						printf('<option value=%d>%s %s %s</option>',$result[0],$result[1],$result[2]);
 					}
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
