@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Searching for patients sessions:</P> %s',"\n");
+	printf('<P>Hello world! Searching for visitted doctors:</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
 
 	include('config.php');	

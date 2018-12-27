@@ -2,15 +2,15 @@
 include('config.php');	
 $link = mysqli_connect($server, $user, $password, $database)
 	or die('Error: Unable to connect: ' . mysqli_connect_error());
-$Doctors_id = mysqli_real_escape_string($link, $_POST['patients_id']);
+$patients_id = mysqli_real_escape_string($link, $_POST['patients_id']);
 $jaloba = mysqli_real_escape_string($link, $_POST['jaloba']);
 
 // «¿›— ≈…œ»“‹
 // PhPMyAdmin
 // —¿ »À¿ ¬Œ–Àƒ
-echo $Doctors_id;
+echo $patients_id;
 echo $jaloba;
-$SQLquery = "INSERT INTO patseans (patients_id,jaloba) VALUES ($patients_id,$jaloba')";
+$SQLquery = "INSERT INTO patseans (patients_id,jaloba) VALUES ($patients_id,$jaloba)";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
