@@ -29,6 +29,25 @@
 			<TD>
 			  <P>Add New Session:</P>
 			  <form action="add_reception_form_action.php" method="post">
+				Select index of the current session:
+				<select name="seans_id2">
+				<?php 
+		                        include('config.php');	
+					$link = mysqli_connect($server, $user, $password, $database)					
+	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
+						
+					$SQLquery = 'SELECT seansid FROM patseans';
+		                        $SQLresult = mysqli_query($link,$SQLquery);
+					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
+					{
+						printf('<option value=%d>%d</option>',$result[0],$result[0]);
+					}
+					mysqli_free_result($SQLresult);
+					mysqli_close($link);
+					?>
+				</select>	
+          		  	<br>
+
               		  	Select Doctor:
 				<select name="Doctors_id">
 					<?php 
@@ -51,28 +70,7 @@
           		  	<br>
 				Date (YYYY-MM-DD HH:MM:SS): <input type="text" name="date">
           		  	<br>
-				<br>
-				Index of the current session:
-				<select name="seans_id2">
-				<?php 
-		                        include('config.php');	
-					$link = mysqli_connect($server, $user, $password, $database)					
-	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
-						
-					$SQLquery = 'SELECT seansid FROM patseans';
-		                        $SQLresult = mysqli_query($link,$SQLquery);
-					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
-					{
-						printf('<option value=%d>%d</option>',$result[0],$result[0]);
-					}
-					mysqli_free_result($SQLresult);
-					mysqli_close($link);
-					?>
-				</select>	
-          		  	<br>
- 
-
-            		  	<input type="submit" value="Add new Session">
+			 	<input type="submit" value="Add new Session">
       			  </form>
 			</TD>
 		</TR>
