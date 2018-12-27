@@ -10,7 +10,7 @@ $jaloba = mysqli_real_escape_string($link, $_POST['jaloba']);
 // —¿ »À¿ ¬Œ–Àƒ
 echo $patients_id;
 echo $jaloba;
-$SQLquery = "INSERT INTO patseans (patients_id,jaloba) VALUES ($patients_id,$jaloba)";
+$SQLquery = "INSERT INTO patseans (patients_id,jaloba) VALUES ($patients_id,'$jaloba')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
