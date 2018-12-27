@@ -71,6 +71,7 @@
           		  	<br>
 				<br>
 				Index of the current session:
+				<select name="seans_id2">
 				<?php 
 		                        include('config.php');	
 					$link = mysqli_connect($server, $user, $password, $database)					
@@ -85,7 +86,7 @@
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
 					?>
-
+				</select>	
           		  	<br>
  
 
