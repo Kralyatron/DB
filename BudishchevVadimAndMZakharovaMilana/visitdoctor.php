@@ -14,7 +14,7 @@
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM patseans INNER JOIN patients on patseans.patients_id=patients.id INNER JOIN visitdoctor on visitdoctor.patseans_seansid=patseans.seansid  INNER JOIN Doctors on Doctors.id=visitdoctor.Doctors_id';
+	$SQLquery = 'SELECT * FROM visitdoctor INNER JOIN Doctors on Doctors.id=visitdoctor.Doctors_id';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
@@ -28,7 +28,7 @@
         while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %d </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD><TD> %s </TD> ',$result[10],$result[12],$result[9],$result[8]);
+		printf('<TD> %d </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD><TD> %s </TD> ',$result[4],$result[6],$result[3],$result[2]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
