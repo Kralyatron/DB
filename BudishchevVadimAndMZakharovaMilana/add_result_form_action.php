@@ -12,7 +12,7 @@ $seans_id2=mysqli_real_escape_string($link, $_POST['seans_id2']);
 // ÑÀÊÈËÀ ÂÎĞËÄ
 echo $result;
 echo $seans_id2;
-$SQLquery = "UPDATE visitdoctor SET result=$result where seans_id2=$seans_id2 and result=NULL)";
+$SQLquery = "UPDATE visitdoctor SET result='$result' where seans_id2=$seans_id2 and result IS NULL)";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
